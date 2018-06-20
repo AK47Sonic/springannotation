@@ -1,10 +1,7 @@
 package com.sky.config;
 
-import com.sky.Service.BookService;
 import com.sky.bean.Person;
 import org.springframework.context.annotation.*;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 
 //配置类==配置文件
 @Configuration

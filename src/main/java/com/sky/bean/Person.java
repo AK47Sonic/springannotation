@@ -1,8 +1,23 @@
 package com.sky.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Person {
+
+    @Value(value = "zhangsan")
     private String name;
+    @Value("#{20-2}")
     private  Integer age;
+    @Value("${person.nickName}")
+    private String nickName;
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
     public Person() {
     }
@@ -18,6 +33,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", nickName='" + nickName + '\'' +
                 '}';
     }
 
